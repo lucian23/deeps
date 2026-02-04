@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>800m Atletism - Proba Regină a Mijlocului</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">800m</div>
+            <ul class="nav-links">
+                <li><a href="#home">Acasă</a></li>
+                <li><a href="#despre">Despre</a></li>
+                <li><a href="#recorduri">Recorduri</a></li>
+                <li><a href="#tehnica">Tehnică</a></li>
+                <li><a href="#calculator">Calculator Ritm</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="fade-in">Proba de 800 Metri</h1>
+            <p class="fade-in-delay">Cea mai dificilă probă din atletism - combinația perfectă între viteză și rezistență</p>
+            <button class="cta-button" onclick="scrollToSection('despre')">Descoperă Mai Mult</button>
+        </div>
+        <div class="track-animation">
+            <div class="runner" id="runner"></div>
+        </div>
+    </section>
+
+    <section id="despre" class="about">
+        <div class="container">
+            <h2>Despre Proba de 800m</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="icon">🏃</div>
+                    <h3>Distanța</h3>
+                    <p>800 de metri sau două tururi complete pe o pistă standard de atletism</p>
+                </div>
+                <div class="about-card">
+                    <div class="icon">⚡</div>
+                    <h3>Caracteristici</h3>
+                    <p>Combină viteza unui sprinter cu rezistența unui fondist</p>
+                </div>
+                <div class="about-card">
+                    <div class="icon">💪</div>
+                    <h3>Dificultate</h3>
+                    <p>Considerată cea mai dificilă probă din atletism din punct de vedere fizic și mental</p>
+                </div>
+                <div class="about-card">
+                    <div class="icon">🎯</div>
+                    <h3>Strategie</h3>
+                    <p>Necesită o strategie precisă de ritm și distribuție a efortului</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recorduri" class="records">
+        <div class="container">
+            <h2>Recorduri Mondiale</h2>
+            <div class="records-container">
+                <div class="record-card men">
+                    <h3>Bărbați</h3>
+                    <div class="record-time">1:40.91</div>
+                    <p class="athlete">David Rudisha</p>
+                    <p class="details">Kenya • 9 August 2012</p>
+                    <p class="location">Londra, Marea Britanie</p>
+                </div>
+                <div class="record-card women">
+                    <h3>Femei</h3>
+                    <div class="record-time">1:53.28</div>
+                    <p class="athlete">Jarmila Kratochvílová</p>
+                    <p class="details">Cehoslovacia • 26 Iulie 1983</p>
+                    <p class="location">München, Germania</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tehnica" class="technique">
+        <div class="container">
+            <h2>Tehnica și Strategia</h2>
+            <div class="technique-content">
+                <div class="technique-item">
+                    <h3>1. Startul (0-100m)</h3>
+                    <p>Accelerare controlată, găsirea poziției în peloton. Evitarea consumului excesiv de energie.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 12.5%"></div>
+                    </div>
+                </div>
+                <div class="technique-item">
+                    <h3>2. Prima Tură (100-400m)</h3>
+                    <p>Menținerea unui ritm constant, economisirea energiei pentru finalizare.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 50%"></div>
+                    </div>
+                </div>
+                <div class="technique-item">
+                    <h3>3. A Doua Tură (400-600m)</h3>
+                    <p>Rezistență mentală, menținerea tehnicii în ciuda oboselii.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="technique-item">
+                    <h3>4. Finalizarea (600-800m)</h3>
+                    <p>Sprint final, mobilizarea ultimelor resurse de energie.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="calculator">
+        <div class="container">
+            <h2>Calculator Ritm 800m</h2>
+            <div class="calculator-box">
+                <p>Calculează timpii intermediari pentru obiectivul tău:</p>
+                <div class="input-group">
+                    <label for="targetTime">Timp Țintă (secunde):</label>
+                    <input type="number" id="targetTime" placeholder="Ex: 120" min="90" max="300">
+                </div>
+                <button class="calc-button" onclick="calculateSplits()">Calculează</button>
+                <div id="results" class="results"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="facts">
+        <div class="container">
+            <h2>Curiozități</h2>
+            <div class="facts-grid">
+                <div class="fact-card">
+                    <h3>🔥 Acidul Lactic</h3>
+                    <p>La 800m, corpul produce cantități mari de acid lactic, provocând senzația de "arsură" în mușchi.</p>
+                </div>
+                <div class="fact-card">
+                    <h3>🎭 Psihologie</h3>
+                    <p>Proba necesită o rezistență mentală extraordinară pentru a depăși durerea și oboseala.</p>
+                </div>
+                <div class="fact-card">
+                    <h3>⏱️ Ritm Perfect</h3>
+                    <p>Cei mai buni atleți rulează cele două tururi cu diferențe de doar 1-3 secunde.</p>
+                </div>
+                <div class="fact-card">
+                    <h3>🏅 Istorie</h3>
+                    <p>Proba de 800m face parte din programul olimpic din 1896 pentru bărbați și din 1928 pentru femei.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 800m Atletism. Toate drepturile rezervate.</p>
+            <p>Pasiune pentru atletism și performanță</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
